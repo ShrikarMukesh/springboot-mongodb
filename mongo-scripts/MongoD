@@ -1,0 +1,89 @@
+show dbs;
+use bookstore;
+
+to Open Mongo Shell : mongosh 
+
+show collections
+
+var name = "Shrikar
+name = "Mukesh"
+
+db.books.insertOne({{
+    "title": "Think in Java",
+    "author": "Bruce Eckel",
+    "pages": 500,
+    "genres": ["fantasy", "Magical"],
+    "rating": 9
+});
+
+db.books.insertMany({
+    "title": "Think in Java",
+    "author": "Bruce Eckel",
+    "pages": 500,
+    "genres": ["fantasy", "Magical"],
+    "rating": 9
+},{
+    "title": "Think in Java",
+    "author": "Bruce Eckel",
+    "pages": 500,
+    "genres": ["fantasy", "Magical"],
+    "rating": 9
+});
+------Searching
+
+db.books.find();
+db.books.find({"author":"Bruce Eckel"});
+
+db.books.findOne({"_id":"624c23b2aaf79b7ffbb35f63"});
+
+db.books.find().count();
+db.books.find({"author": "Bruce Eckel" }).count();
+
+db.books.find().limit(2);
+
+------Sorting
+
+db.books.find().sort({ title:1}); --> 1 means Ascending Order
+db.books.find().sort({ title:1}).limit(3);
+
+-----------Nested Documents
+db.books.insertOne({"title": "Think in Java","author": "Bruce Eckel","pages": 500,"genres": ["fantasy", "Magical"],"rating": 9,reviews:[{name:"TegNoor",body:"Great Book"},{name:"Shrikar",body:"Nice Book"}]});
+
+db.books.insertOne({"title": "Autobiography of a Yogi","author": "Paramanda","pages": 230,"genres": ["Spiritual Book", "Magical"],"rating": 9,reviews:[{name:"Shashikanth",body:"Great Book"},{name:"Vijaylaxmi",body:"Nice Book"}]});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
