@@ -1,4 +1,4 @@
-server.port=8800
+
 spring.data.mongodb.uri="mongodb://admin:password@localhost:27017/blog"
 spring.data.mongodb.database=blog
 
@@ -8,4 +8,6 @@ spring.data.mongodb.database=blog
 #spring.data.mongodb.password=blogUserPwd
 #spring.data.mongodb.database=blog
 #spring.data.mongodb.auto-index-creation=true
+
+server.port=8082
 
